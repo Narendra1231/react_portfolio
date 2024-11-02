@@ -1,38 +1,289 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body{
+  background-color: rgb(50, 50, 50);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+a{
+  text-decoration: none;
+}
+.nav-bar{
+  background-color: rgb(50, 50, 50);
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.left{
+  font-size: 2em;
+  font-weight: 500;
+}
+.sp{
+  color: rgb(237, 37, 11) ;
+  font-weight: bold;
+}
+.nav-items{
+  color: whitesmoke;
+  margin: 20px;
+  padding: 2px;
+  font-size:1.5em;
+  font-weight: bold;
+}
+.nav-items:hover{
+  border-bottom: 4px solid rgb(236, 225, 225);
+  color: rgb(40, 157, 157);
+}
+
+.home{
+height: 100vh;
+display:flex;
+justify-content: space-around;
+align-items: center;
+}
+.home .left{
+    background-color: rgb(50, 50, 50);
+    border: 2px solid rgb(236, 227, 227);
+    padding: 20px;
+    font-family: cursive;
+    border-radius: 10px;
+    text-align: center;
+    height: auto;
+    width: 700px;
+    box-shadow: 1px 1px 10px rgb(230, 216, 216) inset,2px 2px 10px rgb(230, 216, 216) ;
+}
+.home .right .image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home .right .image img{
+ height: 300px;
+ width: 300px;
+ border-radius: 100%;
+ border:5px solid rgb(90, 97, 91);
+ filter: drop-shadow(2px 2px 15px rgb(230, 224, 224));
+ 
+}
+.home .right .image img:hover{
+  animation-name: animate;
+ animation-duration: 3s;
+ animation-iteration-count: infinite;
+ animation-timing-function: linear;
+}
+@keyframes animate{
+  0%{
+    border:5px solid rgb(49, 50, 50);
+    filter: drop-shadow(2px 2px 15px rgb(230, 224, 224));
+    transform: translate(0,0);
   }
-  to {
-    transform: rotate(360deg);
+  25%{
+    border:5px solid rgb(63, 64, 63);
+    filter: drop-shadow(2px 2px 15px rgb(230, 220, 220));
+    transform: translate(0,-20px);
+  }
+  50%{
+    border:5px solid rgb(77, 76, 74);
+    filter: drop-shadow(2px 2px 15px rgb(166, 158, 158));
+    transform: translate(0,20px);
+  }
+  75%{
+    border:5px solid rgb(182, 180, 189);
+    filter: drop-shadow(2px 2px 15px rgb(117, 112, 112));
+    transform: translate(20px,0);
+  }
+  100%{
+    border:5px solid rgb(246, 240, 244);
+    filter: drop-shadow(2px 2px 15px rgb(75, 71, 71));
+    transform: translate(-20px,0);
+  }
+}
+
+.ex{
+  margin-top: 40px;
+  width: 1000px;
+}
+.ex .tr-title{
+  text-shadow: 5px 5px 5px rgb(118, 114, 114);
+}
+.ex-items img{
+  height: 100px;
+  width: 100px;
+}
+.ex .ex-items{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  text-wrap: wrap;
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid white;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px white inset,2px 2px 10px white;
+}
+.ex-items .right{
+  width: 700px;
+}
+
+.skill{
+  margin-top:60px;
+  width: 1000px;
+}
+ .title{
+  text-shadow: 5px 5px 5px rgb(118, 114, 114);
+}
+.skill .items{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 20px;
+}
+.skill .items .item{
+  width: calc(33.33%);
+  height: 150px;
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 13px;
+  box-shadow: 1px 1px 5px white inset, 1px 1px 5px white;
+  
+}
+.skill .items .item img{
+  width: 100px;
+}
+.projects{
+  margin-top: 40px;
+  width: 1000px;
+}
+.projects .ptitle{
+  text-shadow: 5px 5px 5px rgb(118, 114, 114);
+} 
+.projects .project{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.projects .project .work{
+  width: calc(30%);
+  margin: 10px 10px;
+  border: 2px solid white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px white;
+}
+.projects .project .work .cardd{
+ background-color:rgb(50, 50, 50) ;
+}
+.projects .project .work img{
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+  border-radius: 10px;
+}
+.projects .project .work .im{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact{
+  margin-top: 40px;
+  width: 1000px;
+  height: 30vh;
+}
+.contact .ctitle{
+  text-shadow: 5px 5px 5px rgb(118, 114, 114);
+}
+.contact .react-items{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact .react-items .react-icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  margin-left: 40px;
+  font-size: 2em;
+  color: white;
+  border: 2px solid rgb(218, 201, 201);
+  border-radius: 100%;
+  box-shadow: 1px 1px 10px white;
+}
+.contact .react-items .react-icons:hover{
+  background-color: white;
+  border: black;
+  color: black;
+  cursor: pointer;
+}
+
+
+@media(max-width:480px){
+  .nav-bar{
+    height:auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .nav-bar .left{
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+.nav-bar .right{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.7em;
+}
+  .home{
+    height:100vh ;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+  }
+  .home .left{
+    position: relative;
+    top: 400px;
+   margin:auto;
+   margin-left: 120px;
+  }
+  .home .right{
+    position: relative;
+    top:700px;
+    left: 240px;
+  }
+  .home .right .image img{
+    height: 700px;
+    width: 700px;
+  }
+  .con{
+    height: 100vh;
+    margin: auto;
+    position: relative;
+    top: 1200px;
+    left: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .skill{
+    height: 100vh;
+    position: relative;
+    top: 1200px;
+  }
+  .projects{
+    height: 100vh;
+    position: relative;
+    top:1500px;
+  }
+  .contact{
+    height:50vh;
+    position: relative;
+    top:1800px;
   }
 }
